@@ -49,13 +49,25 @@ export default function Register() {
         className="space-y-6 mx-6"
       >
         <div>
-          <label className="block font-semibold mb-2">ほごしゃのニックネーム</label>
+          <label className="block font-semibold mb-2">ほごしゃの姓</label>
           <input
             name="parent_nickname"
             type="text"
             onChange={handleChange}
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
-            placeholder="例: パパ・ママ"
+            placeholder="例: テクノ"
+            required
+          />
+        </div>
+
+        <div>
+          <label className="block font-semibold mb-2">ほごしゃの名</label>
+          <input
+            name="parent_nickname"
+            type="text"
+            onChange={handleChange}
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+            placeholder="例: 太郎"
             required
           />
         </div>
