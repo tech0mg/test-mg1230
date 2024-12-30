@@ -73,7 +73,7 @@ export default function Register() {
         </div>
 
         <div>
-          <label className="block font-semibold mb-2">お子様の性別</label>
+          <label className="block font-semibold mb-2">おこさまの性別</label>
           <select
             name="gender"
             onChange={handleChange}
