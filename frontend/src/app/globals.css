@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* メインコンテンツ用のグラデーション背景 */
+.bg-gradient-main {
+  background: linear-gradient(to bottom, #ECE9E6, #FFFFFF);
+}
+
+@layer base {
+  /* デフォルトテキスト色を#9A877Aに設定 */
+  body {
+    color: #9A877A;
+  }
+}
+
+/* グリッド全体のスタイル */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    background-color: #f9f9f9; /* 背景色を設定 */
+  }
+  
+  /* 各画像カードのスタイル */
+  .image-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px; /* カードを丸くする */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
+    background-color: #fff; /* カードの背景色 */
+  }
+  
+  /* 画像のスタイル */
+  .image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像をカード内に収める */
+    transition: transform 0.3s ease; /* ホバー時のズーム効果 */
+  }
+  
+  /* ホバー時のズーム効果 */
+  .image-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* ハートボタンのスタイル */
+  .like-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: white;
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .like-button:hover {
+    transform: scale(1.2);
+  }
+
+  .iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .responsive-iframe {
+    width: 100%;
+    aspect-ratio: 9 / 16; /* 16:9の比率を維持 */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  
+
+/* top_totalボタン用虹色アニメーション */
+@keyframes rainbow {
+  0% { background-color: red; }
+  16.7% { background-color: orange; }
+  33.3% { background-color: yellow; }
+  50% { background-color: green; }
+  66.7% { background-color: blue; }
+  83.3% { background-color: indigo; }
+  100% { background-color: violet; }
+}
+
+.animate-rainbow {
+  animation: rainbow 2s linear infinite; /* 2秒で虹色を循環 */
+  border: none;
+  font-weight: bold;
+}
+
+/* top_totalボタン用ピカピカ点滅アニメーション */
+@keyframes blink {
+  0%, 50%, 100% { background-color: black; color: yellow; }
+  25%, 75% { background-color: yellow; color: black; }
+}
+
+.animate-blink {
+  animation: blink 1.5s linear infinite; /* 1.5秒で点滅 */
+  border: none;
+  font-weight: bold;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.5);
+    opacity: 0;
+  }
+}
