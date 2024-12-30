@@ -88,7 +88,7 @@ export default function Register() {
         </div>
 
         <div>
-          <label className="block font-semibold mb-2">おこさまのニックネーム</label>
+          <label className="block font-semibold mb-2">おこさまの姓</label>
           <input
             name="child_nickname"
             type="text"
