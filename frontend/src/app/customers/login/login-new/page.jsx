@@ -49,7 +49,7 @@ export default function Register() {
         className="space-y-6 mx-6"
       >
         <div>
-          <label className="block font-semibold mb-2">保護者のニックネーム</label>
+          <label className="block font-semibold mb-2">ほごしゃのニックネーム</label>
           <input
             name="parent_nickname"
             type="text"
