@@ -73,6 +73,21 @@ export default function Register() {
         </div>
 
         <div>
+          <label className="block font-semibold mb-2">ほごしゃの性別</label>
+          <select
+            name="gender"
+            onChange={handleChange}
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
+            required
+          >
+            <option value="">性別を選択してください</option>
+            <option value="男">男</option>
+            <option value="女">女</option>
+            <option value="回答しない">回答しない</option>
+          </select>
+        </div>
+
+        <div>
           <label className="block font-semibold mb-2">おこさまのニックネーム</label>
           <input
             name="child_nickname"
